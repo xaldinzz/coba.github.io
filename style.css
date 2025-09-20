@@ -1,73 +1,73 @@
-/* Styling Dasar */
+/* style.css */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: -apple-system, BlinkMacSystem-Font, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9;
     color: #333;
-    line-height: 1.6;
 }
 
-header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-main {
+.container {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Styling untuk setiap bagian konten */
-.card {
-    background-color: #fff;
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://asset.kompas.com/crops/O-tN7gnerMQu0A4y2kExkU1Yo2E=/0x0:1000x667/750x500/data/photo/2021/01/22/600a70823c91f.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    overflow: hidden; /* agar gambar tidak keluar dari card */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card h2 {
-    margin-top: 0;
+.section h2 {
     color: #0056b3;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-.card-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-/* Styling untuk tombol (Poin #2) */
-.button {
+.button-link {
     display: inline-block;
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #218838;
+.button-link:hover {
+    background-color: #0056b3;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: #333;
-    color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    color: #777;
 }
