@@ -1,169 +1,349 @@
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #1e293b; background: #f9fafb; }
-
-/* Sections */
-.section { max-width: 1200px; margin: auto; padding: 60px 20px; }
-h1, h2, h3 { font-weight: 600; color: #0c4a6e; }
-
-/* Hero */
-.hero { position: relative; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
-.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(70%); }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(12,74,110,0.7), rgba(12,74,110,0.4), transparent); }
-.hero-content { position: relative; max-width: 800px; padding: 20px; }
-.hero-tag { display: inline-block; background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 999px; font-size: 12px; letter-spacing: 3px; margin-bottom: 15px; }
-.hero h1 { font-size: 40px; }
-.hero-desc { margin-top: 15px; font-size: 18px; color: #f1f5f9; }
-
-/* Buttons */
-.btn-primary { display: inline-block; background: #38bdf8; color: #0f172a; padding: 12px 24px; border-radius: 999px; margin-top: 20px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.btn-primary:hover { background: #fff; transform: translateY(-3px); }
-.btn-secondary { display: inline-block; border: 1px solid #bae6fd; background: #fff; padding: 8px 16px; border-radius: 999px; text-decoration: none; color: #0c4a6e; font-weight: 500; }
-
-/* History */
-.history { display: grid; grid-template-columns: 1.3fr 1fr; gap: 30px; align-items: center; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0; }
-.stat { background: #f0f9ff; padding: 20px; border-radius: 12px; text-align: center; }
-.stat-number { font-size: 24px; font-weight: bold; color: #0c4a6e; }
-.stat-label { font-size: 12px; text-transform: uppercase; color: #64748b; }
-.history-img img { width: 100%; border-radius: 20px; box-shadow: 0 10px 20px rgba(56,189,248,0.3); }
-
-/* Gallery */
-.gallery-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; gap: 20px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.gallery-item { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 5px 15px rgba(56,189,248,0.2); }
-.gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s; }
-.gallery-item:hover img { transform: scale(1.05); }
-.gallery-item figcaption { position: absolute; bottom: 0; width: 100%; background: linear-gradient(to top, rgba(15,23,42,0.8), transparent); color: #fff; padding: 15px; font-size: 14px; }
-
-/* Map */
-.map { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; }
-.map-info { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(56,189,248,0.2); display: grid; gap: 10px; }
-.map-frame iframe { width: 100%; min-height: 320px; border: 0; border-radius: 20px; box-shadow: 0 5px 20px rgba(56,189,248,0.4); }
-
-/* Benefits */
-.benefits { background: #0c4a6e; color: #fff; text-align: center; }
-.benefits p { color: #cbd5e1; margin: 15px auto; max-width: 800px; }
-.benefits-grid { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.benefits-grid article { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; transition: transform 0.3s; text-align: left; }
-.benefits-grid article:hover { transform: translateY(-5px); }
-
-/* Video */
-.video { display: grid; grid-template-columns: 1fr 1.1fr; gap: 30px; align-items: center; }
-.video-tag { font-size: 12px; color: #38bdf8; letter-spacing: 2px; text-transform: uppercase; }
-.video-frame iframe { width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 20px; box-shadow: 0 10px 20px rgba(56,189,248,0.3); }
-
-/* Footer */
-.footer { background: #0f172a; color: #fff; text-align: center; padding: 60px 20px; }
-.footer p { color: #94a3b8; margin: 20px auto; max-width: 700px; font-size: 14px; }
-.footer-meta { font-size: 12px; color: #64748b; margin: 20px 0; }
-
-/* Wikipedia Button */
-.btn-wiki {
-  display: inline-block;
-  background: #0ea5e9; /* biru elegan */
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  transition: 0.3s ease;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.btn-wiki:hover {
-  background: #38bdf8; /* biru muda saat hover */
-  transform: translateY(-3px);
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f9fafb;
 }
 
-.wiki-btn {
-  margin-top: 20px;
-}
-
-/* Hero */
-.hero { 
-  position: relative; 
-  height: 80vh; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  text-align: center; 
-  color: #fff;  /* <- semua teks default putih */
-}
-
-.hero h1 {
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6); /* biar kontras di atas gambar */
-  line-height: 1.2;
-}
-
-.hero p {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #e2e8f0;               /* abu-abu terang, gak seputih h1 */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5); /* bikin tetap jelas */
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Benefits Section */
-.benefits {
-  padding: 80px 20px;
-  background: #f9fafb;
-  text-align: center;
-}
-
-.benefits h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #1e293b;
-  font-weight: 700;
-}
-
-.benefits p {
-  max-width: 700px;
-  margin: 0 auto 50px auto;
-  font-size: 18px;
-  color: #475569;
-  line-height: 1.6;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.benefits-grid article {
-  background: #f1f5f9; /* lebih kelihatan abu ketimbang putih */
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.benefits-grid article:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-}
-
-.benefits-grid h3 {
-  font-size: 20px;
-  color: #0f172a;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.benefits-grid p {
-  font-size: 16px;
-  color: #475569;
-  line-height: 1.5;
+/* Template per Section */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
 section {
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05) inset;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* Nagian Headings */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #0c4a6e;
+}
+
+/* Bagian Hero */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(12,74,110,0.7), rgba(12,74,110,0.4), transparent);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #e2e8f0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tombol tombol */
+.btn-primary {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    border-radius: 999px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid #bae6fd;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #0c4a6e;
+    font-weight: 500;
+}
+
+/* Tombol bagian wiki */
+.btn-wiki {
+    display: inline-block;
+    background: #0ea5e9;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-wiki:hover {
+    background: #38bdf8;
+    transform: translateY(-3px);
+}
+
+.wiki-btn {
+    margin-top: 20px;
+}
+
+/* Bagian Sejarah */
+.history {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat {
+    background: #f0f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0c4a6e;
+}
+
+.stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.history-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Bagian galeri Foto */
+.gallery-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(15,23,42,0.8), transparent);
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Bagian Maps */
+.map {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.map-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+    display: grid;
+    gap: 10px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    min-height: 320px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Bagian Manfaat */
+.benefits {
+    padding: 80px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.benefits p {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.benefits-grid article {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-grid article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.benefits-grid h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.benefits-grid p {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Video YT */
+.video {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.video-tag {
+    font-size: 12px;
+    color: #38bdf8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.video-frame iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer p {
+    color: #94a3b8;
+    margin: 20px auto;
+    max-width: 700px;
+    font-size: 14px;
+}
+
+.footer-meta {
+    font-size: 12px;
+    color: #64748b;
+    margin: 20px 0;
 }
